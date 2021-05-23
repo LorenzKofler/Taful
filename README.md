@@ -1,4 +1,7 @@
 # Taful
 Taful: a fucked up library
 
-Made by Xam und Znerol
+Made by Xam and Znerol
+
+## Usage:
+See taful.h

@@ -6,9 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <errno.h>
 #include <openssl/blowfish.h>
-#include "dump.h"
 /* INCLUDES */
 
 /* TYPEDEFS */
@@ -22,8 +20,11 @@ typedef void (*taful_ptr)();
 /* TYPEDEFS */
 
 
-// Validates a given null-terminated license key
-// @param input: license key (max. 16 bytes)
+/*
+|- Validates a given null-terminated license key
+|-- @param input: license key (max. 32 bytes)
+|-- @returns: TAFUL_OK on Success, else an error code
+*/
 eTafulStatus validate(char *input);
 
 #endif
