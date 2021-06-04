@@ -5,7 +5,7 @@ taful: taful.c
 	$(CC) -L. main.c -o main -ltaful
 
 run:
-	LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):./ ./main "FlotteKarotte"
+	LD_LIBRARY_PATH=$(LD_LIBRARY_PATH):./ ./main "Ich bin eine FlotteKarotte!"
 
 clean:
 	rm libtaful.so

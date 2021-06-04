@@ -4,11 +4,13 @@
 #include "taful.h"
 
 int main(int argc, char **argv) {
-    if (argc < 2) {
+    if (argc != 2) {
         printf("Usage: %s license_string\n", argv[0]);
-        return -EINVAL;
+        return EINVAL;
     }
 
-    printf("Validation result: %d\n", validate(argv[1]));
-    return EXIT_SUCCESS;
+    int result = errno = validate(argv[1]);
+    perror("Status");
+
+    return result;
 }

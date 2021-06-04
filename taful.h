@@ -2,18 +2,18 @@
 #define TAFUL_H
 
 /* INCLUDES */
+#include <errno.h>
 #include <stdint.h>
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include <openssl/blowfish.h>
 /* INCLUDES */
 
 /* TYPEDEFS */
 typedef enum {
-    TAFUL_ERROR = 0,
-    TAFUL_OK = 42,
-    TAFUL_INVALID_PARAMS = 3,
+    TAFUL_ERROR = EKEYREJECTED,
+    TAFUL_OK = EXIT_SUCCESS,
+    TAFUL_INVALID_PARAMS = EINVAL,
 } eTafulStatus;
 
 typedef void (*taful_ptr)();
